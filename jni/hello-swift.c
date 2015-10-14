@@ -16,7 +16,7 @@ jstring Java_com_example_helloswift_HelloSwift_stringFromJNI(JNIEnv * env, jobje
   uint8_t c = SWIFT_ADD(a,b);
 
   char result[255];
-  sprintf(result, "The result is %d", c);
+  sprintf(result, "We are computing the addition of %d and %d.\n\nThe result is %d.\n\nThis computation was written in Swift and is running on this Android device!", a, b, c);
 
   return (*env)->NewStringUTF(env, result);
 }

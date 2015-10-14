@@ -14,7 +14,7 @@ LLC := $(NDK)/toolchains/llvm-3.5/prebuilt/$(HOST_SYSTEM)/bin/llc
 LLCFLAGS := -mtriple=armv7-none-linux-androideabi -filetype=obj
 CC := $(NDK_TOOLCHAIN)/bin/arm-linux-androideabi-gcc --sysroot=$(NDK_SYSROOT)
 LD := $(NDK_TOOLCHAIN)/bin/arm-linux-androideabi-ld
-LDFLAGS := -shared -L$(NDK_SYSROOT)/usr/lib -L$(NDK_TOOLCHAIN)/lib/gcc/arm-linux-androideabi/4.9 -lc -lgcc
+LDFLAGS := -shared -L$(NDK_SYSROOT)/usr/lib -lc
 
 OBJECTS := $(addsuffix .o,$(basename $(SRC_FILES)))
 LL_IRS := $(patsubst %.swift,%.ll, $(filter %.swift,$(SRC_FILES)))
