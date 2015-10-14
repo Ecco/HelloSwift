@@ -38,13 +38,13 @@ public class HelloSwift extends Activity
     }
 
     /* A native method that is implemented by the
-     * 'hello-jni' native library, which is packaged
+     * 'hello-swift' native library, which is packaged
      * with this application.
      */
     public native String  stringFromJNI();
 
     /* This is another native method declaration that is *not*
-     * implemented by 'hello-jni'. This is simply to show that
+     * implemented by 'hello-swift'. This is simply to show that
      * you can declare as many native methods in your Java code
      * as you want, their implementation is searched in the
      * currently loaded native libraries only the first time
@@ -55,9 +55,9 @@ public class HelloSwift extends Activity
      */
     public native String  unimplementedStringFromJNI();
 
-    /* this is used to load the 'hello-jni' library on application
+    /* this is used to load the 'hello-swift' library on application
      * startup. The library has already been unpacked into
-     * /data/data/com.example.helloswift/lib/libhello-jni.so at
+     * /data/data/com.example.helloswift/lib/libhello-swift.so at
      * installation time by the package manager.
      */
     static {
